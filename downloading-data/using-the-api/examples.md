@@ -38,7 +38,7 @@ from mp_api.client import MPRester
 
 with MPRester("your_api_key_here") as mpr: 
     docs = mpr.materials.summary.search(material_ids=["mp-149"], fields=["task_ids"])
-    task_ids1 = docs[0].task_ids
+    task_ids = docs[0].task_ids
     # -- Shortcut for a single Materials Project ID:
     task_ids = mpr.get_task_ids_associated_with_material_id("mp-149")
 ```
